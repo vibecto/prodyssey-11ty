@@ -9,6 +9,14 @@
 [build.cache]
   node_modules = "node_modules"
 
+# Prodyssey is retired: send every path on prodyssey.com (and www) to Vibecto.
+# Must stay first; force = true overrides any existing file at the path.
+[[redirects]]
+  from = "/*"
+  to = "https://vibecto.ai/"
+  status = 301
+  force = true
+
 # Redirect rules for optimized images (optional fallback)
 [[redirects]]
   from = "/assets/images/optimized/*"
